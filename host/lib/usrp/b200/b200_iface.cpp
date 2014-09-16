@@ -534,6 +534,7 @@ public:
 
         unsigned char out_buff[VREQ_MAX_SIZE];
 
+#undef min        
         // Request loopback read, which will indicate the firmware's current control request buffer size
         // Make sure that if operating as USB2, requested length is within spec
         int ntoread = std::min(transfer_size, (int)sizeof(out_buff));
